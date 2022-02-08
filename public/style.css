@@ -1,0 +1,242 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* HTML5 display-role reset for older browsers */
+:root {
+  /*Colors
+   
+   Primary*/
+  --Moderate-blue: hsl(238, 40%, 52%);
+  --Soft-Red: hsl(358, 79%, 66%);
+  --Light-grayish-blue: hsl(239, 57%, 85%);
+  --Pale-red: hsl(357, 100%, 86%);
+  /*### Neutral*/
+  --Dark-blue: hsl(212, 24%, 26%);
+  --Grayish-Blue: hsl(211, 10%, 45%);
+  --Light-gray: hsl(223, 19%, 93%);
+  --Ver-light-grey: hsl(228, 33%, 97%);
+  --White: hsl(0, 0%, 100%);
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Rubik", sans-serif;
+  background-color: var(--Light-gray);
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+ol,
+ul {
+  list-style: none;
+}
+img,
+source {
+  max-width: 100%;
+}
+p {
+  font-size: 1em;
+  font-weight: 400;
+  color: var(--Grayish-Blue);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+  color: var(--Dark-blue);
+}
+button {
+  border: none;
+  background: none;
+}
+/*components*/
+#wrapper {
+  max-width: 50em;
+  padding: 1em;
+  margin: 0 auto;
+}
+.main {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-gap: 1em;
+}
+.card {
+  display: grid;
+  grid-template-columns: 20px repeat(8, auto);
+  grid-template-rows: 50px 1fr;
+  grid-column: 1/-1;
+  align-items: center;
+  background-color: var(--White);
+  padding: 1em;
+  padding-right: 0.2em;
+  border-radius: 15px;
+  grid-column-gap: 1.5em;
+}
+.card > * {
+  justify-content: flex-start;
+}
+@media only screen and (max-width: 500px) {
+  .card {
+    grid-template-rows: repeat(3, auto);
+    grid-gap: 0.5em;
+  }
+}
+.card--line {
+  grid-column: 2/-1;
+}
+.card__count {
+  grid-row: 1/-1;
+  grid-column: 1/2;
+  background-color: var(--Light-gray);
+  padding: 1em;
+  border-radius: 8px;
+  height: 60px;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 2em;
+}
+@media only screen and (max-width: 500px) {
+  .card__count {
+    grid-row: 3/4;
+    flex-direction: row;
+    height: auto;
+    width: 80px;
+    padding: 0.5em 0.5em;
+    justify-content: space-evenly;
+  }
+}
+.count__up,
+.count__down {
+  color: var(--Grayish-Blue);
+}
+.score {
+  color: var(--Moderate-blue);
+}
+.card__content {
+  grid-row: 2/3;
+  grid-column: 2/9;
+}
+@media only screen and (max-width: 500px) {
+  .card__content {
+    grid-column: 1/-1;
+  }
+}
+.card__modal-btn {
+  grid-row: 1/2;
+  grid-column: 7/9;
+  color: var(--Moderate-blue);
+  font-weight: 500;
+  justify-self: flex-end;
+}
+@media only screen and (max-width: 500px) {
+  .card__modal-btn {
+    grid-row: 3/4;
+    grid-column: 6/10;
+  }
+}
+.card__modal-btn::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f3e5";
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-size: 1em;
+  margin-right: 0.2em;
+}
+.picture {
+  min-width: 30px;
+  max-width: 30px;
+  border-radius: 50%;
+}
+.card__bio {
+  display: flex;
+  grid-row: 1/2;
+  grid-column: 2/7;
+  align-items: center;
+}
+@media only screen and (max-width: 500px) {
+  .card__bio {
+    grid-column: 1/-1;
+  }
+}
+.card__bio > * {
+  margin-left: 0.5em;
+}
+.card__name {
+  color: var(--Dark-blue);
+  font-weight: 500;
+}
+.card__name--tag::after{
+  content: "you";
+  margin-left: .5em;
+  background-color: var(--Moderate-blue);
+  color: white;
+  text-align: center;
+  padding: .2em;
+  border-radius: 2px;
+}
+.form{
+  background-color: white;
+  grid-column: 1/-1;
+  display: flex;
+  padding: 1em;
+  align-items: flex-start;
+  border-radius: 15px;
+}
+.form >  * ~ *{
+  margin-left: 1em;
+}
+.form__text-area{
+  border: 2px solid var(--Light-gray);
+  padding: 1em 1em;
+  flex-basis: 80%;
+  border-radius: 5px;
+}
+.form__button{
+  margin-left: auto;
+  background-color: var(--Moderate-blue);
+  border-radius: 10px;
+  padding: 1em 1.5em;
+  color: white;
+  font-size: 12px;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 1em;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

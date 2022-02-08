@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Interactive comments section</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!--
+  <script src="https://kit.fontawesome.com/0d51d1dda5.js" crossorigin="anonymous"></script>
+-->
+  <link rel="stylesheet" href="style.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style defer src="main.js"></style>
+</head>
+<body>
+  <div id="wrapper">
+    <main class="main">
+      <!-- card start-->
+      <div class="card">
+        <div class="card__count">
+          <button class="count__up">
+            +
+          </button>
+          <p class="score">
+            12
+          </p>
+          <button class="count__down">
+            -
+          </button>
+        </div>
+        <div class="card__bio">
+          <picture class="card__picture picture">
+            <source srcset="./images/avatars/image-amyrobson.png" type="png">
+            <source srcset="./images/avatars/image-amyrobson.webp" type="webp">
+            <img src="./images/avatars/image-amyrobson.png" alt="">
+          </picture>
+          <p class="card__name">amyrobson</p>
+          <p class="card__date">1 month ago</p>
+        </div>
+        <button class="card__modal-btn">Reply</button>
+        <p class="card__content">Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You've nailed the design and the responsiveness at various breakpoints works really well.</p>
+      </div>
+      <!--card end-->
+      <!-- card start-->
+      <div class="card">
+        <div class="card__count">
+          <button class="count__up">
+            +
+          </button>
+          <p class="score">
+            5
+          </p>
+          <button class="count__down">
+            -
+          </button>
+        </div>
+        <div class="card__bio">
+          <picture class="card__picture picture">
+            <source srcset="./images/avatars/image-maxblagun.png" type="png">
+            <source srcset="./images/avatars/image-maxblagun.webp" type="webp">
+            <img src="./images/avatars/image-maxblagun.png" alt="">
+          </picture>
+          <p class="card__name">maxblagun</p>
+          <p class="card__date">2 month ago</p>
+        </div>
+        <button class="card__modal-btn">Reply</button>
+        <p class="card__content">Woah, your project looks awesome! How long have you been coding for? I'm still new, but think I want to dive into React as well soon. Perhaps you can give me an insight on where I can learn React? Thanks!</p>
+      </div>
+      <!--card end-->
+      <!-- card start-->
+      <div class="card card--line">
+        <div class="card__count">
+          <button class="count__up">
+            +
+          </button>
+          <p class="score">
+            4
+          </p>
+          <button class="count__down">
+            -
+          </button>
+        </div>
+        <div class="card__bio">
+          <picture class="card__picture picture">
+            <source srcset="./images/avatars/image-ramsesmiron.png" type="png">
+            <source srcset="./images/avatars/image-ramsesmiron.webp" type="webp">
+            <img src="./images/avatars/image-ramsesmiron.png" alt="">
+          </picture>
+          <p class="card__name">ramsesmiron</p>
+          <p class="card__date">1 week ago</p>
+        </div>
+        <button class="card__modal-btn">Reply</button>
+        <p class="card__content">If you're still new, I'd recommend focusing on the fundamentals of HTML, CSS, and JS before considering React. It's very tempting to jump ahead but lay a solid foundation first.</p>
+      </div>
+      <!--card end-->
+      <!-- card start-->
+      <div class="card card--line">
+        <div class="card__count">
+          <button class="count__up">
+            +
+          </button>
+          <p class="score">
+            2
+          </p>
+          <button class="count__down">
+            -
+          </button>
+        </div>
+        <div class="card__bio">
+          <picture class="card__picture picture">
+            <source srcset="./images/avatars/image-juliusomo.png" type="png">
+            <source srcset="./images/avatars/image-juliusomo.webp" type="webp">
+            <img src="./images/avatars/image-juliusomo.png" alt="">
+          </picture>
+          <p class="card__name card__name--tag">juliusomo</p>
+          <p class="card__date">2 days ago</p>
+        </div>
+        <button class="card__modal-btn">Reply</button>
+        <p class="card__content">If you're still new, I'd recommend focusing on the fundamentals of HTML, CSS, and JS before considering React. It's very tempting to jump ahead but lay a solid foundation first.</p>
+      </div>
+
+      <!--card end-->
+      <form action="" class="form">
+        <picture class="form__picture picture">
+          <source srcset="./images/avatars/image-juliusomo.png" type="PNG">
+          <source srcset="./images/avatars/image-juliusomo.webp" type="WEBP">
+          <img src="./images/avatars/image-juliusomo.png" alt="">
+        </picture>
+        <textarea name="" placeholder="Add a comment" class="form__text-area"></textarea>
+        <button class="form__button" type="submit">SEND</button>
+      </form>
+    </main>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </div>
+  <!-- Pull dynamic content from the data.json file -->
+  
+  
+</body>
+</html>
